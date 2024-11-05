@@ -38,7 +38,7 @@ import img2 from "./assets/img2.jpg";
 import img3 from "./assets/img3.jpg";
 import img4 from "./assets/img4.jpg";
 import img5 from "./assets/img5.jpg";
-
+import md from "./assets/md.jpg";
 import ContactSection from "./contact";
 import clothes from "./assets/clothes.png";
 import dates from "./assets/dates.png";
@@ -241,40 +241,40 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 font-['Montserrat',sans-serif]">
       <header className="bg-white shadow-sm fixed w-full z-10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-[#2F5233]">
+          <h1 className="text-2xl font-bold text-[#2F5233] tracking-tight">
             Yalama International
           </h1>
           <nav className="hidden md:flex space-x-6">
             <a
               href="#home"
-              className="text-gray-600 hover:text-[#2F5233] transition-colors"
+              className="text-gray-600 hover:text-[#2F5233] transition-colors text-sm font-medium"
             >
               Home
             </a>
             <a
               href="#about"
-              className="text-gray-600 hover:text-[#2F5233] transition-colors"
+              className="text-gray-600 hover:text-[#2F5233] transition-colors text-sm font-medium"
             >
               About Us
             </a>
             <a
               href="#products"
-              className="text-gray-600 hover:text-[#2F5233] transition-colors"
+              className="text-gray-600 hover:text-[#2F5233] transition-colors text-sm font-medium"
             >
               Our Products
             </a>
             <a
               href="#gallery"
-              className="text-gray-600 hover:text-[#2F5233] transition-colors"
+              className="text-gray-600 hover:text-[#2F5233] transition-colors text-sm font-medium"
             >
               Gallery
             </a>
             <a
               href="#why-us"
-              className="text-gray-600 hover:text-[#2F5233] transition-colors"
+              className="text-gray-600 hover:text-[#2F5233] transition-colors text-sm font-medium"
             >
               Why Choose Us
             </a>
@@ -350,10 +350,10 @@ const Home: React.FC = () => {
               variants={fadeIn}
               className="max-w-3xl mx-auto text-center"
             >
-              <h2 className="text-5xl font-bold mb-6">
+              <h2 className="text-5xl font-bold mb-6 leading-tight">
                 Welcome to Yalama International General Trading
               </h2>
-              <p className="text-xl mb-8">
+              <p className="text-xl mb-8 leading-relaxed">
                 Your reliable partner in the global marketplace, specializing in
                 medicines, granite, rice, turmeric, clothing, dates, chillies,
                 and spices.
@@ -361,7 +361,7 @@ const Home: React.FC = () => {
               <Button asChild>
                 <a
                   href="#products"
-                  className="hover:bg-white hover:text-[#2F5233] bg-[#F5F8F5] transition-colors"
+                  className="hover:bg-white hover:text-[#2F5233] bg-[#F5F8F5] transition-colors text-base font-semibold"
                 >
                   Explore Our Products
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -378,30 +378,56 @@ const Home: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeIn}
-              className="max-w-3xl mx-auto text-center"
+              className="max-w-4xl mx-auto"
             >
-              <h2 className="text-4xl font-bold mb-6 text-[#2F5233]">
+              <h2 className="text-4xl font-bold mb-6 text-[#2F5233] leading-tight text-center">
                 Who We Are
               </h2>
-              <p className="text-gray-600 mb-8">
-                Yalama International General Trading specializes in the import
-                and export of a diverse range of products. With years of
-                experience in the trading industry, we have built a reputation
-                for reliability and quality.
+              <p className="text-sm font-semibold text-gray-500 mb-2 text-center">
+                Since 2017
               </p>
-              <p className="text-gray-600">
-                Our mission is to connect markets with premium products while
-                ensuring that our clients receive the best possible service. We
-                believe in fostering strong relationships with our suppliers and
-                customers alike.
-              </p>
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mt-8">
+                <div className="md:w-1/3">
+                  <div className="relative w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-[#2F5233]">
+                    <img
+                      src={md}
+                      alt="Dr. Y. Achamamba"
+                      className="w-full h-full object-cover"
+                      style={{
+                        transform: "scale(1.4)",
+                        objectPosition: "50% -15%", // Adjusting to center the face
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-bold text-[#2F5233] mb-2">
+                    Dr. Y. Achamamba
+                  </h3>
+                  <p className="text-lg font-semibold mb-1">MBBS, MD NEURO</p>
+                  <p className="text-md text-gray-900 mb-4">
+                    Managing Director
+                  </p>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    With her extensive medical background and business acumen,
+                    Dr. Achamamba leads Yalama International with a vision for
+                    excellence and innovation in international trade.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    Yalama International General Trading specializes in the
+                    import and export of a diverse range of products. With years
+                    of experience in the trading industry, we have built a
+                    reputation for reliability and quality.
+                  </p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
 
         <section id="products" className="py-20 bg-gray-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-12 text-center text-[#2F5233]">
+            <h2 className="text-4xl font-bold mb-12 text-center text-[#2F5233] leading-tight">
               Our Products
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -428,11 +454,15 @@ const Home: React.FC = () => {
                       </div>
                     </CardHeader>
                     <CardContent className="flex-grow p-4">
-                      <CardTitle className="mb-2">{product.name}</CardTitle>
-                      <CardDescription>{product.description}</CardDescription>
+                      <CardTitle className="mb-2 text-xl font-semibold">
+                        {product.name}
+                      </CardTitle>
+                      <CardDescription className="text-sm leading-relaxed">
+                        {product.description}
+                      </CardDescription>
                     </CardContent>
                     <CardFooter className="bg-gray-50 p-4">
-                      <p className="text-sm text-gray-600">
+                      <p className="text-xs text-gray-600 leading-relaxed">
                         {product.additionalInfo}
                       </p>
                     </CardFooter>
@@ -445,61 +475,79 @@ const Home: React.FC = () => {
 
         <section id="pharmaceutical" className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-12 text-center text-[#2F5233]">
+            <h2 className="text-4xl font-bold mb-12 text-center text-[#2F5233] leading-tight">
               Pharmaceutical Products
             </h2>
             <Card className="overflow-hidden">
               <Table>
                 <TableHeader>
                   <TableRow className="bg-[#2F5233]">
-                    <TableHead className="text-white font-semibold">
+                    <TableHead className="text-white font-semibold text-sm">
                       HS Code
                     </TableHead>
-                    <TableHead className="text-white font-semibold">
+                    <TableHead className="text-white font-semibold text-sm">
                       Product Category
                     </TableHead>
-                    <TableHead className="text-white font-semibold">
+                    <TableHead className="text-white font-semibold text-sm">
                       Description
                     </TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   <TableRow className="hover:bg-gray-50">
-                    <TableCell className="font-medium">HS 300490</TableCell>
-                    <TableCell>General Medicaments</TableCell>
-                    <TableCell>
+                    <TableCell className="font-medium text-sm">
+                      HS 300490
+                    </TableCell>
+                    <TableCell className="text-sm">
+                      General Medicaments
+                    </TableCell>
+                    <TableCell className="text-sm">
                       Covers pharmaceutical products with mixed or unmixed
                       formulations intended for therapeutic or prophylactic use
                     </TableCell>
                   </TableRow>
                   <TableRow className="hover:bg-gray-50">
-                    <TableCell className="font-medium">HS 300215</TableCell>
-                    <TableCell>Immunological Products</TableCell>
-                    <TableCell>
+                    <TableCell className="font-medium text-sm">
+                      HS 300215
+                    </TableCell>
+                    <TableCell className="text-sm">
+                      Immunological Products
+                    </TableCell>
+                    <TableCell className="text-sm">
                       Includes vaccines, toxins, cell cultures and related
                       immunological preparations
                     </TableCell>
                   </TableRow>
                   <TableRow className="hover:bg-gray-50">
-                    <TableCell className="font-medium">HS 300420</TableCell>
-                    <TableCell>Antibiotic Products</TableCell>
-                    <TableCell>
+                    <TableCell className="font-medium text-sm">
+                      HS 300420
+                    </TableCell>
+                    <TableCell className="text-sm">
+                      Antibiotic Products
+                    </TableCell>
+                    <TableCell className="text-sm">
                       Medicaments containing antibiotics for treating bacterial
                       infections
                     </TableCell>
                   </TableRow>
                   <TableRow className="hover:bg-gray-50">
-                    <TableCell className="font-medium">HS 300439</TableCell>
-                    <TableCell>Hormonal Preparations</TableCell>
-                    <TableCell>
+                    <TableCell className="font-medium text-sm">
+                      HS 300439
+                    </TableCell>
+                    <TableCell className="text-sm">
+                      Hormonal Preparations
+                    </TableCell>
+                    <TableCell className="text-sm">
                       Pharmaceutical products containing hormones or steroids
                       but not containing antibiotics
                     </TableCell>
                   </TableRow>
                   <TableRow className="hover:bg-gray-50">
-                    <TableCell className="font-medium">HS 300431</TableCell>
-                    <TableCell>Insulin Products</TableCell>
-                    <TableCell>
+                    <TableCell className="font-medium text-sm">
+                      HS 300431
+                    </TableCell>
+                    <TableCell className="text-sm">Insulin Products</TableCell>
+                    <TableCell className="text-sm">
                       Medicaments containing insulin for diabetes treatment
                     </TableCell>
                   </TableRow>
@@ -508,9 +556,10 @@ const Home: React.FC = () => {
             </Card>
           </div>
         </section>
+
         <section id="gallery" className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-12 text-center text-[#2F5233]">
+            <h2 className="text-4xl font-bold mb-12 text-center text-[#2F5233] leading-tight">
               Our Gallery
             </h2>
             <GalleryCarousel />
@@ -519,7 +568,7 @@ const Home: React.FC = () => {
 
         <section id="why-us" className="py-20 bg-[#F5F8F5]">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-12 text-center text-[#2F5233]">
+            <h2 className="text-4xl font-bold mb-12 text-center text-[#2F5233] leading-tight">
               Why Choose Us
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -535,11 +584,15 @@ const Home: React.FC = () => {
                     <CardHeader className="pb-2">
                       <div className="flex flex-col items-center">
                         {item.icon}
-                        <CardTitle className="mt-4">{item.title}</CardTitle>
+                        <CardTitle className="mt-4 text-xl font-semibold">
+                          {item.title}
+                        </CardTitle>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-600">{item.description}</p>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {item.description}
+                      </p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -548,7 +601,9 @@ const Home: React.FC = () => {
           </div>
         </section>
       </main>
+
       <ContactSection />
+
       <footer className="bg-[#2F5233] text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -556,7 +611,7 @@ const Home: React.FC = () => {
               <h3 className="text-2xl font-semibold mb-4">
                 Yalama International
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300 text-sm">
                 Your trusted partner in global trade.
               </p>
             </div>
@@ -566,7 +621,7 @@ const Home: React.FC = () => {
                 <li>
                   <a
                     href="#home"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     Home
                   </a>
@@ -574,7 +629,7 @@ const Home: React.FC = () => {
                 <li>
                   <a
                     href="#about"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     About Us
                   </a>
@@ -582,7 +637,7 @@ const Home: React.FC = () => {
                 <li>
                   <a
                     href="#products"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     Our Products
                   </a>
@@ -590,7 +645,7 @@ const Home: React.FC = () => {
                 <li>
                   <a
                     href="#gallery"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     Gallery
                   </a>
@@ -598,7 +653,7 @@ const Home: React.FC = () => {
                 <li>
                   <a
                     href="#why-us"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     Why Choose Us
                   </a>
@@ -607,22 +662,22 @@ const Home: React.FC = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300 text-sm">
                 YALAMA INTERNATIONAL GENERAL TRADING D.W.C., L.L.C
               </p>
-              <p className="text-gray-300">
+              <p className="text-gray-300 text-sm">
                 Dubai World Central Block C, Emirates Road,
               </p>
-              <p className="text-gray-300">
+              <p className="text-gray-300 text-sm">
                 Jabel Ali, Dubai, United Arab Emirates
               </p>
-              <p className="text-gray-300">P.O.Box 28228</p>
-              <p className="text-gray-300">+971 545665189</p>
-              <p className="text-gray-300">+971 503895768</p>
+              <p className="text-gray-300 text-sm">P.O.Box 28228</p>
+              <p className="text-gray-300 text-sm">+971 545665189</p>
+              <p className="text-gray-300 text-sm">+971 503895768</p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-600 text-center">
-            <p className="text-gray-300">
+            <p className="text-gray-300 text-sm">
               &copy; 2024 Yalama International General Trading. All rights
               reserved.
             </p>

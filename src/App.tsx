@@ -1,4 +1,4 @@
-import Home from "./Home.tsx";
+import Home from "./Home";
 
 function App() {
   return <Home />;
